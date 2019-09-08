@@ -1,0 +1,17 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdownButton {
+    padding: 10px;
+}
+
+.dropdownContent {
+    display: none;
+    position: absolute;
+}
+
+.dropdown:hover .dropdownContent {
+    display: block;
+}
