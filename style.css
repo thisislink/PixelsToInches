@@ -3,7 +3,7 @@
     display: inline-block;
 }
 
-.dropdownButton {
+.dropdownButtonStyle {
     padding: 10px;
 }
 
@@ -12,6 +12,6 @@
     position: absolute;
 }
 
-.dropdown:hover .dropdownContent {
+.dropdownContent {
     display: block;
 }
