@@ -15,3 +15,7 @@
 .dropdownContent {
     display: block;
 }
+
+.dropdownShow {
+    display: block!important;
+}
