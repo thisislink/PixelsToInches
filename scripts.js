@@ -1,27 +1,45 @@
 /* Logic to calculate pixels to inches, inches to pixels, and DPI*/
+let albumArtDetails = {
+  getPixels: 0,
+  getInches: 0,
+  defaultDPI: 300,
+  resultPixelsToInches: 0,
+  resultInchesToPixels: 0,
+  resultDPI: 0,
+  displayPixelsToInches: function() {
+    console.log(this.resultPixelsToInches + ' Inches');
+  },
+  calculatePixelsToInches: function(enterPixels) {
+    this.getPixels = enterPixels;
+    let pixelsToInches = this.getPixels / this.defaultDPI;
+    this.resultPixelsToInches = pixelsToInches;
+    this.displayPixelsToInches();
+  },
+  displayInchesToPixels: function() {
+    console.log(this.resultInchesToPixels + ' Pixels');
+  },
+  calculateInchesToPixels: function(enterInches) {
+    this.getInches = enterInches;
+    let inchesToPixels = this.getInches * this.defaultDPI;
+    this.resultInchesToPixels = inchesToPixels;
+    this.displayInchesToPixels();
+  },
+  displayDPI: function() {
+    console.log(this.resultDPI + ' DPI');
+  },
+  calculateDPI: function(enterPixels, enterInches) {
+    this.getPixels = enterPixels;
+    this.getInches = enterInches;
+    this.resultDPI = this.getPixels / this.getInches;
+    this.displayDPI();
+  }
+};
 
-// declare globals
-var userEnteredPixels = 0;
-var userEnteredInches = 0;
-var defaultDPI = 300;
+//get Pixels, calculate Pixels to Inches and display the result
+albumArtDetails.calculatePixelsToInches(500);
 
-// Pixels to Inches function
-function PixelsToInches(userPixels) {
-  return userPixels/defaultDPI;
-}
+//get Inches, calculate Inches to Pixels and display the result
+albumArtDetails.calculateInchesToPixels(8);
 
-// Inches to Pixels function
-function InchesToPixels(userInches) {
-  return userInches * defaultDPI;
-}
-
-// DPI calculation function
-function CalculateDPI(userPixels, userInches) {
-  return userPixels/userInches;
-}
-
-console.log("Pixels to Inches: " + PixelsToInches(3000) + " inches")
-
-console.log("Inches to Pixels: " + InchesToPixels(3) + " pixels")
-
-console.log("Resolution: " + CalculateDPI(3000,4) + " DPI")
+//get Pixels, get Inches, calculate the DPI and display the result
+albumArtDetails.calculateDPI(300, 4)
