@@ -1,31 +1,42 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <header>
   <title>Album Art Dimensions Calculator</title>
-  <link rel="stylesheet" href="style.css">
 </header>
 
-<main>
-  <h1>Pixels to Inches Conversion Calculator for Album Art</h1>
-  <section>
-    <h2>Pixels to Inches</h2>
-    <p>Enter Pixels: </p>
-  </section>
+<body>
+  <main>
+    <code>Note: To perform calculations, the default DPI is set to 300.</code>
+    <section>
+      <h2>Pixels to Inches</h2>
+      <form id="pixelsToInchesForm">
+        <input id="pixelsField" type="text" autocomplete="off" placeholder="Enter Pixels">
+        <button>Calculate Pixels to Inches</button>
+      </form>  
+    <p id="pixelsToInchesResult"></p>
+    </section>
 
-  <section>
-    <h2>Inches to Pixels</h2>
-    <p>Enter Inches: </p>
-  </section>
-
-  <section>
-    <h1>DPI Calculator</h1>
-    <p>Enter Pixels: <br>
-      Enter Inches:
-    </p>
-  </section>
-</main>
-
-<script src="scripts.js"></script>
+    <section>
+      <h2>Inches to Pixels</h2>
+      <form id="inchesToPixelsForm">
+        <input id="inchesField" type="text" autocomplete="off" placeholder="Enter Inches">
+        <button>Calculate Inches to Pixels</button>
+      </form>
+      <p id="inchesToPixelsResult"></p>
+    </section>
+    
+    <section>
+      <h2>DPI Calculator</h2>
+      <form id="dpiForm">
+        <input id="dpiInchesField" type="text" autocomplete="off" placeholder="Enter Inches">
+        <input id="dpiPixelsField" type="text" autocomplete="off" placeholder="Enter Pixels">
+        <button>Calculate DPI</button>
+      </form>
+      <p id="dpiResult"></p>
+    </section>
+   
+  </main>
+  <script src="script.js"></script>
 </body>
 
 </html>
